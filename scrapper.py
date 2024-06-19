@@ -14,11 +14,6 @@ def bianca_scrapper():
     texto = sopa.find('h1').text
 
     retorno = {'title':titulo, 'text':texto}
-    print(retorno)
     return jsonify(retorno)
-
-@app.route('/test')
-def test():
-    return 'teste'
 
 app.run(debug = False)
