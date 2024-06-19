@@ -18,4 +18,4 @@ def bianca_scrapper():
     retorno = {'title':titulo, 'text':texto}
     return jsonify(retorno)
 
-app.run(debug = False)
+app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 3000)), debug = False)
