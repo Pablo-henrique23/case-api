@@ -1,8 +1,10 @@
 import requests
+import os
 from bs4 import BeautifulSoup
 from flask import Flask, jsonify
 
 app = Flask(__name__)
+os.environ['PORT'] = '4000'
 
 @app.route('/')
 def bianca_scrapper():
